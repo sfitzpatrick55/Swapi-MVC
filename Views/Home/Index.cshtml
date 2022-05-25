@@ -1,8 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    Random rand = new Random();
+    string[] names = new[] {"Addie", "Alex", "Tom", "Ken", "Paul"};
+
+    string name = names[rand.Next(0, names.Length)];
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Welcome @name</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
