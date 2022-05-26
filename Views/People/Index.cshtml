@@ -20,6 +20,17 @@
             </div>
         }
     </div>
+    
+    <div>
+        @if (Model.Previous is not null)
+        {
+            <a asp-action="Index" asp-route-page="@Model.PreviousPageNum">Previous</a>
+        }
+        @if (Model.Next is not null)
+        {
+            <a asp-action="Index" asp-route-page="@Model.NextPageNum">Next</a>
+        }
+    </div>
 }
 else
 {
