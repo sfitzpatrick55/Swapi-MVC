@@ -4,7 +4,7 @@
     ViewData["Title"] = "People";
 }
 
-<h1>People Index</h1>
+<h1 class="text-center">People Index</h1>
 @if (Model.Results?.Count() > 0) // Accessing the Results property, using the null conditional acccess operator (?), access the Count() method only if Results is not null. If Results is null it exits as false. Then validates that the given count is greater than 0
 {
     <div>
