@@ -41,6 +41,10 @@ body {
     0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.items:traits p {
+.item-traits p {
   margin: 0.2rem 0;
+}
+
+.item h4 {
+  text-decoration: underline;
 }
