@@ -1,0 +1,33 @@
+@model PeopleViewModel
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="d-flex flex-row justify-content-between align-items-end">
+    <h1 class="m-0">@Model.Name</h1>
+    <a asp-action="Index">Back to Index</a>
+</div>
+<hr />
+<section class="item p-4 text-center"> <!-- Using the "item" class, bootstrap p-4 padding, and center text -->
+    <h3>Person Details</h3>
+    <hr />
+    <div class="row m-0 pt-3 justify-content-between"> <!-- Using bootstrap "row", removed the margin, added padding to top with pt-3 and justify content: space between -->
+        <div class="col-3"> <!-- This bootstrap class will use 3/12 columns or 25% of the available row-->
+            <h5>Name</h5>
+            <p>@Model.Name</p>
+        </div>
+        <div class="col-3">
+            <h5>Birth Year</h5>
+            <p>@Model.BirthYear</p>
+        </div>
+        <div class="col-3">
+            <h5>Height</h5>
+            <p>@Model.Height</p>
+        </div>
+        <div class="col-3">
+            <h5>Mass</h5>
+            <p>@Model.Mass</p>
+        </div>
+    </div>
+</section>
