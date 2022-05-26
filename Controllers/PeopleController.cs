@@ -22,5 +22,17 @@ namespace SwapiMVC.Controllers
 
             return View(people);
         }
+        public async Task<IActionResult> Person(string id) // This will control the Person view created later
+        {
+            var response = await _httpClient.GetAsync($"people/{id}"); // Calling SWAPI to get a single person
+            if (id is null || response.IsSuccessStatusCode == false) // Checking to make sure the id is not null and the responding success status code is 200
+                return RedirectToAction(nameof(Index)); // if null or not 200, redirects to Index
+
+            var responseString = await response.Content.ReadAsStringAsync(); // Reads the response as a string
+            
+            var person = JsonSerializer.Deserialize<PeopleViewModel>(responseString); // Deserializes the JSON
+            
+            return View(person);
+        }
     }
 }
