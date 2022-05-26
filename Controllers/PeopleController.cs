@@ -10,7 +10,7 @@ namespace SwapiMVC.Controllers
         {
             _httpClient = httpClientFactory.CreateClient("swapi"); // Setting the new private field _httpClient equal to httpClientFactory and invoke the CreateClient method
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string page)
         {
             return View();
         }
