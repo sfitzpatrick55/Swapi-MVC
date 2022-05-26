@@ -7,15 +7,17 @@
 <h1 class="text-center">People Index</h1>
 @if (Model.Results?.Count() > 0) // Accessing the Results property, using the null conditional acccess operator (?), access the Count() method only if Results is not null. If Results is null it exits as false. Then validates that the given count is greater than 0
 {
-    <div>
+    <div class="d-flex flex-row flex-wrap">
         @foreach (var person in Model.Results) // Foreach loop through all person objects in Results, displays Name, Mass, Height, and Year Born 
         {
-            <div>
-                <h4>@person.Name</h4> 
-                <div>
-                    <p>Mass: @person.Mass</p>
-                    <p>Height: @person.Height</p>
-                    <p>Born: @person.BirthYear</p>
+            <div class="item-container">
+                <div class="item">
+                    <h4>@person.Name</h4> 
+                    <div class="item-traits">
+                        <p>Mass: @person.Mass</p>
+                        <p>Height: @person.Height</p>
+                        <p>Born: @person.BirthYear</p>
+                    </div>
                 </div>
             </div>
         }
