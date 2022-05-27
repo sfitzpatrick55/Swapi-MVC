@@ -26,6 +26,7 @@ body {
 .item {
   display: block;
   border: solid 1px lightgray;
+  color: #444;
   padding: 2rem 1rem;
   margin-bottom: 0.5rem;
   border-radius: 4px;
@@ -36,6 +37,7 @@ body {
 }
 
 .item:hover {
+  color: black;
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.5),
     0 6px 20px 0 rgba(0, 0, 0, 0.5);
@@ -48,3 +50,4 @@ body {
 .item h4 {
   text-decoration: underline;
 }
+
